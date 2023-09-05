@@ -1,0 +1,69 @@
+.intro {
+    background: linear-gradient(45deg, var(--verde), var(--azul), var(--bosque));
+    background-size: 300%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    animation: gradient 15s ease infinite
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+.presentacion {
+    margin: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .presentacion {
+        margin: 2rem 1rem;
+    }
+}
+.presentacion label {
+    font-size: 3em;
+}
+
+.presentacion ul {
+    font-size: 2em;
+}
+
+.presentacion li {
+    margin-left: 2rem;
+}
+
+.tecnologias {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.tecnologia {
+    font-size: 1em;
+    background-color: var(--bosque);
+    color: var(--gris);
+    padding: 1rem;
+    border-radius: 40px;
+    font-weight: 700;
+}
+
+.image {
+    border-radius: 100%;
+    margin: 2rem;
+}

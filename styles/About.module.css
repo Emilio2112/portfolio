@@ -1,0 +1,78 @@
+.container {
+    color: var(--bosque);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    background: linear-gradient(30deg, var(--azul), var(--verde), var(--bosque));
+    background-size: 300%;
+    color: var(--blanco);
+    padding: 2rem;
+    width: 50%;
+    animation: gradient 15s ease infinite
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.subtitulo {
+    font-size: 1.5em;
+}
+
+.formacion {
+    margin: 2rem 2rem 2rem 10rem;
+}
+
+.descripcion {
+    margin: 2rem 2rem 2rem 10rem;
+    font-size: 1.5em;
+}
+
+.link {
+    transition-property: color;
+    transition-duration: .5s;
+}
+
+.link:hover {
+    color: var(--blanco);
+    background-color: var(--azul);
+    font-style: italic;
+}
+
+.empleos div:nth-child(even) {
+    background: linear-gradient(45deg, var(--verde), var(--azul));
+    color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .titulo {
+        width: auto;
+        font-size: 2rem;
+    }
+
+    .descripcion {
+        font-size: 1em;
+        margin: 1rem;
+    }
+
+    .formacion {
+        margin: 1rem;
+    }
+}

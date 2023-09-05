@@ -1,0 +1,40 @@
+.container {
+    color: var(--bosque);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70vw;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    background: linear-gradient(30deg, var(--azul), var(--verde), var(--bosque));
+    background-size: 300%;
+    color: var(--blanco);
+    padding: 2rem;
+    width: 50%;
+    animation: gradient 15s ease infinite
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .titulo {
+        width: auto;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,38 @@
+.container {
+    color: var(--bosque);
+    padding: 2rem;
+    opacity: 1;
+}
+
+.empresa {
+    font-size: 2em;
+    margin-left: 1rem;
+}
+
+.puesto {
+    font-size: 1.5em;
+    margin-left: 1.5rem;
+}
+
+.fecha {
+    font-style: italic;
+    margin-left: 2rem;
+}
+.descripcion {
+    margin-left: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .empresa {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+    .puesto{
+        font-size: 1.2em;
+    }
+    .fecha {
+        font-size: 0.8em;
+    }
+}
+
+

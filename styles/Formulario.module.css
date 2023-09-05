@@ -1,0 +1,62 @@
+.container {
+    color: var(--bosque);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 70vw;
+    margin-bottom: 2rem;
+}
+
+.container form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container form label {
+    font-size: 2em;
+}
+
+.campo {
+    font-size: 1.5em;
+    margin: 1rem 3rem;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+.boton {
+    font-size: 1.5em;
+    margin: 1rem 10rem;
+    border-radius: 7px;
+    color: var(--blanco);
+    background-color: var(--bosque);
+    transition-property: color, background-color;
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+.boton:hover {
+    color: var(--bosque);
+    background-color: var(--azul);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .container form label {
+        font-size: 1.5em;
+        padding: .7rem;
+    }
+
+    .campo {
+        font-size: 1.2em;
+        margin: .5rem 1rem;
+    }
+
+    .boton {
+        margin: 1rem;
+    }
+
+}
