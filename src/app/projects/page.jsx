@@ -8,14 +8,8 @@ export async function getProjects() {
 }
 
 const Projects = async() => {
-  const proyectos = await getProjects()
   return (
-    <div className={styles.container}>
-      <div className={styles.titulo}>Proyectos</div>
-      {proyectos.map((proyecto) => (
-        <Proyecto key={proyecto.id} proyecto={proyecto.attributes}/>
-      ))}
-    </div>
+    <div>Proyectos</div>
   )
 }
 
