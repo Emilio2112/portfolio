@@ -2,6 +2,10 @@ import Formulario from "../../../components/Formulario"
 import styles from "../../../styles/Contacto.module.css"
 import Image from "next/image"
 
+export const metadata = {
+  title: "| Contacto",
+};
+
 const Contacto = () => {
   return (
     <div className={styles.container}>

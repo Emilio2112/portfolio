@@ -14,7 +14,7 @@ const Proyecto = ({proyecto}) => {
         </div>
         <div className={styles.info}>
             <h1 className={nombre}>{nombre}</h1>
-            <a href={url}>{url}</a>
+            <a href={url}>{`Prueba ${nombre}`}</a>
             <p>{resumen}</p>
         </div>
     </div>

@@ -52,6 +52,13 @@
   transition-duration: 0.5s;
 }
 
+.active {
+  padding: 1rem;
+  font-weight: 700;
+  background-color: var(--azul);
+  color: var(--blanco);
+}
+
 .enlace:hover {
   background-color: var(--azul);
   color: var(--blanco);

@@ -7,6 +7,10 @@ export async function getTrabajos() {
   return trabajos.data;
 }
 
+export const metadata = {
+  title: "| Sobre mí",
+};
+
 const About = async () => {
   const trabajos = await getTrabajos();
   return (
