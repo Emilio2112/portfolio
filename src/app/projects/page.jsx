@@ -4,8 +4,7 @@ import styles from "../../../styles/Proyectos.module.css"
 export async function getProjects() {
   const response = await fetch(`${process.env.API_URL}/proyectos.json`)
   const respuesta = await response.json()
-  console.log(respuesta)
-  return respuesta.data
+   return respuesta.data
 }
 
 export const metadata = {
