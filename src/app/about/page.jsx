@@ -2,7 +2,7 @@ import Empleos from "../../../components/Empleos";
 import styles from "../../../styles/About.module.css";
 
 export async function getTrabajos() {
-  const response = await fetch(`${process.env.API_URL}/trabajos.json`, { cache: 'no-store' });
+  const response = await fetch(`${process.env.API_URL}/trabajos.json`);
   const trabajos = await response.json();
   return trabajos.data;
 }
