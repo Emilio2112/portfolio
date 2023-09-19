@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "../styles/Carousel.module.css";
 
 export async function getTecnologias() {
-  const response = await fetch(`${process.env.API_URL}/tecnologias?populate=*`);
+  const response = await fetch(`${process.env.API_URL}/tecnologias.json`);
   const tecnologias = await response.json();
   return tecnologias.data;
 }
