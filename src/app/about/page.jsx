@@ -2,7 +2,7 @@ import Empleos from "../../../components/Empleos";
 import styles from "../../../styles/About.module.css";
 
 export async function getTrabajos() {
-  const response = await fetch(`${process.env.API_URL}/trabajos`);
+  const response = await fetch(`${process.env.API_URL}/trabajos.json`, { cache: 'no-store' });
   const trabajos = await response.json();
   return trabajos.data;
 }
@@ -13,6 +13,8 @@ export const metadata = {
 
 const About = async () => {
   const trabajos = await getTrabajos();
+  console.log(trabajos);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.titulo}>Sobre mi...</h1>
