@@ -2,7 +2,7 @@ import Proyecto from "../../../components/Proyecto"
 import styles from "../../../styles/Proyectos.module.css"
 
 export async function getProjects() {
-  const response = await fetch(`${process.env.API_URL}/proyectos.json`)
+  const response = await fetch(`${process.env.API_URL}/proyectos.json`, {cache: 'no-store'})
   const respuesta = await response.json()
    return respuesta.data
 }
