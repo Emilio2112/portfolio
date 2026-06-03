@@ -7,7 +7,7 @@ const Proyecto = ({proyecto}) => {
   return (
     <div className={styles.container}>
         <div className={styles.imageinfo}>
-        <img className={styles.imagen} width={800} height={100} src={imagen.data.attributes.url} alt={nombre} unoptimized></img>
+        <img className={styles.imagen} width={800} height={100} src={imagen.data.attributes.url} alt={nombre}  ></img>
         <div className={styles.mostrar}>
             <p>{descripcion}</p>
         </div>
