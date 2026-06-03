@@ -38,6 +38,7 @@ const Carousel = async () => {
               width={100}
               src={tecnologia.attributes.imagen.data.attributes.url}
               alt={tecnologia.attributes.nombre}
+              unoptimized
             ></Image>
           </div>
         ))}
