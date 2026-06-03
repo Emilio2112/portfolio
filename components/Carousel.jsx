@@ -2,9 +2,27 @@ import Image from "next/image";
 import styles from "../styles/Carousel.module.css";
 
 export async function getTecnologias() {
-  const response = await fetch(`${process.env.API_URL}/tecnologias.json`);
-  const tecnologias = await response.json();
-  return tecnologias.data;
+  try {
+    const response = await fetch("https://emilio2112.github.io/data/tecnologias.json", {
+      cache: 'no-store'
+    });
+
+    if (!response.ok) {
+      throw new Error("No se pudo obtener el JSON de tecnologías");
+    }
+
+    const resultado = await response.json();
+    
+    const lista = resultado.data || resultado; 
+    
+    return Array.isArray(lista) 
+      ? lista.filter(item => item?.attributes?.nombre) 
+      : [];
+
+  } catch (error) {
+    console.error("Error en el carrusel:", error);
+    return [];
+  }
 }
 
 const Carousel = async () => {
