@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
-/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export', // <-- Fuerza a Next.js a exportar HTML puro (carpeta 'out')
   images: {
+    unoptimized: true, // <-- Obligatorio para poder compilar en estático
     remotePatterns: [
       {
         protocol: 'https',
