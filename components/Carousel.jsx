@@ -33,13 +33,13 @@ const Carousel = async () => {
       <div className={styles.contenedor}>
         {tecnologias.map((tecnologia) => (
           <div key={tecnologia.attributes.nombre} className={styles.imagen}>
-            <Image
+            <img
               height={100}
               width={100}
               src={tecnologia.attributes.imagen.data.attributes.url}
               alt={tecnologia.attributes.nombre}
               unoptimized
-            ></Image>
+            ></img>
           </div>
         ))}
       </div>

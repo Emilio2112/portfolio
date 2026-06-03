@@ -16,13 +16,13 @@ const Footer = () => {
             </div>
             <div className={styles.social}>
                 <a href="https://github.com/Emilio2112" target="_blank">
-                <Image className={styles.logo} width={100} height={100} src="/images/github.png" alt="github" unoptimized></Image>
+                <img className={styles.logo} width={100} height={100} src="/images/github.png" alt="github" unoptimized></img>
                 </a>
                 <a href="mailto:piconto12@gmail.com?Subject=Interesado%20en%20tu%20portfolio" target="_blank">
-                <Image className={styles.logo} width={100} height={100} src="/images/email.png" alt="github" unoptimized></Image>
+                <img className={styles.logo} width={100} height={100} src="/images/email.png" alt="github" unoptimized></img>
                 </a>
                 <a href="https://www.linkedin.com/in/emilio-casado/" target="_blank">
-                <Image className={styles.logo} width={100} height={100} src="/images/linkedin.png" alt="linkedin" unoptimized></Image>
+                <img className={styles.logo} width={100} height={100} src="/images/linkedin.png" alt="linkedin" unoptimized></img>
                 </a>
 
             </div>
