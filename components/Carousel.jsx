@@ -1,56 +1,35 @@
-'use client';
+'use client'; // ¡IMPORTANTE! Esto mueve la carga del servidor al navegador
+
+import { useState, useEffect } from 'react';
 import styles from "../styles/Carousel.module.css";
 
-export async function getTecnologias() {
-  try {
-    const response = await fetch("https://emilio2112.github.io/data/tecnologias.json", {
-      cache: 'no-store'
-    });
+export default function Carousel() {
+  const [tecnologias, setTecnologias] = useState([]);
 
-    if (!response.ok) {
-      throw new Error("No se pudo obtener el JSON de tecnologías");
-    }
-
-    const resultado = await response.json();
-    const lista = resultado.data || resultado; 
-    
-    return Array.isArray(lista) 
-      ? lista.filter(item => item?.attributes?.nombre) 
-      : [];
-
-  } catch (error) {
-    console.error("Error en el carrusel:", error);
-    return [];
-  }
-}
-
-const Carousel = async () => {
-  const tecnologias = await getTecnologias();
+  useEffect(() => {
+    fetch("https://emilio2112.github.io/data/tecnologias.json")
+      .then(res => res.json())
+      .then(data => {
+        const lista = data.data || data;
+        setTecnologias(Array.isArray(lista) ? lista : []);
+      })
+      .catch(err => console.error("Error al cargar:", err));
+  }, []);
 
   return (
     <div className={styles.carousel}>
       <div className={styles.contenedor}>
-        {tecnologias.map((tecnologia) => {
-          // CONTROL DE SEGURIDAD PARA LA URL DE LA IMAGEN
-          // Intenta buscar el formato viejo de Strapi, y si no existe, busca la URL directa del JSON
-          const imgUrl = tecnologia?.attributes?.imagen?.data?.attributes?.url 
-            || tecnologia?.attributes?.imagen?.url 
-            || "/images/avatar.jpg";
-
-          return (
-            <div key={tecnologia?.attributes?.nombre || Math.random()} className={styles.imagen}>
-              <img
-                height={100}
-                width={100}
-                src={imgUrl}
-                alt={tecnologia?.attributes?.nombre || "Tecnología"}
-              />
-            </div>
-          );
-        })}
+        {tecnologias.map((tec, i) => (
+          <div key={i} className={styles.imagen}>
+            <img
+              src={tec?.attributes?.imagen?.url || tec?.attributes?.imagen?.data?.attributes?.url || ""}
+              alt="logo"
+              width={100}
+              height={100}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
-};
-
-export default Carousel;
+}
