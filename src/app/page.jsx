@@ -19,7 +19,7 @@ export default async function Home() {
         <div className={styles.tecnologias}>
         </div>
       </div>
-      <Image className={styles.image} width={500} height={500} src="/images/toon.jpg" alt='toon'></Image>
+      <Image className={styles.image} width={500} height={500} src="/images/avatar.jpg" alt='avatar'></Image>
     </div>
     <Carousel />
     </div>
