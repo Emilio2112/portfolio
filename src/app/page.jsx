@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Image from 'next/image'
 import styles from '../../styles/Inicio.module.css'
 import Carousel from '../../components/Carousel'
